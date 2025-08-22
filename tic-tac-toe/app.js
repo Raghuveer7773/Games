@@ -72,3 +72,4 @@ boxes.forEach(box => {
 // Add click event to New Game and Reset buttons
 newGameBtn.addEventListener("click", resetGame);
 resetbtn.addEventListener("click", resetGame);
+  

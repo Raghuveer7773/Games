@@ -4,7 +4,9 @@ let newGameBtn = document.querySelector("#new-game-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-let turnO = true; // true = O's turn, false = X's turn
+
+// Variable to track whose turn it is: true = O's turn, false = X's turn
+let turnO = true; 
 
 const winPatterns = [
   [0, 1, 2],
@@ -23,18 +25,18 @@ const resetGame = () => {
   boxes.forEach(box => {
     box.disabled = false;
     box.innerText = "";
-    box.style.backgroundColor = "#ffffc7"; // remove highlight
+    box.style.backgroundColor = "#ffffc7";
   });
   msgContainer.classList.add("hide");
 };
 
-// Show winner or draw
+// Function to show message (winner or draw)
 const showMessage = (text) => {
   msg.innerText = text;
   msgContainer.classList.remove("hide");
 };
 
-// Check winner or draw
+// Function to check winner or draw
 const checkWinner = () => {
   for (let pattern of winPatterns) {
     const [a, b, c] = pattern;
@@ -51,13 +53,13 @@ const checkWinner = () => {
     }
   }
 
-  // Check for draw
+  // Check for draw if all boxes are filled and no winner
   if ([...boxes].every(box => box.innerText)) {
     showMessage("🤝 It's a Draw!");
   }
 };
 
-// Box click event
+// Add click event to each box
 boxes.forEach(box => {
   box.addEventListener("click", () => {
     box.innerText = turnO ? "O" : "X";
@@ -67,6 +69,6 @@ boxes.forEach(box => {
   });
 });
 
-// Button events
+// Add click event to New Game and Reset buttons
 newGameBtn.addEventListener("click", resetGame);
 resetbtn.addEventListener("click", resetGame);

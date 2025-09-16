@@ -1,0 +1,30 @@
+@media (max-width:425px) {
+
+  .container {
+    height: 53vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    padding-block-start: 2rem;
+  }
+
+  .game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  button.box {
+    width: 24%;
+  }
+
+  .controls {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+}

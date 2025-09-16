@@ -14,23 +14,38 @@
         <button id="new-game-btn">New Game</button>
     </div>
     <main>
-        <h1>Tic Tac Toe Game</h1>
-        <div class="container">
-            <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-            </div>
-        </div>
+  <h1>Tic Tac Toe Game</h1>
 
-        <button id="reset-btn">Reset Game</button>
-    </main>
+  <!-- NEW: Scoreboard + Turn indicator -->
+  <div class="top-row">
+    <div class="scoreboard">
+      <p>Player X: <span id="score-x">0</span></p>
+      <p>Player O: <span id="score-o">0</span></p>
+    </div>
+    <p id="turn">Turn: O</p>
+  </div>
+
+  <div class="container">
+    <div class="game">
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+    </div>
+  </div>
+
+  <!-- Buttons: New Game (board only) & Reset Game (board + scores) -->
+  <div class="controls">
+    <button id="new-game-btn">New Game</button>
+    <button id="reset-btn">Reset Game</button>
+  </div>
+</main>
+
 
     <script src="./app.js"></script>
 </body>

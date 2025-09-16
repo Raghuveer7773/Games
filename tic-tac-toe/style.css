@@ -72,3 +72,67 @@ body{
 .hide{
     display: none;
 }
+
+/* --- existing global styles kept --- */
+
+/* Top row: scoreboard + turn */
+.top-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.scoreboard p {
+  font-size: 2.2vmax;
+  color: #ffffc7;
+  margin: 0.2rem 1rem;
+}
+
+#turn {
+  font-size: 2.4vmax;
+  color: #ffffc7;
+  font-weight: 600;
+}
+
+/* controls placement */
+.controls {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* box hover + animation improvements */
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+  font-size: 8vmin;
+  color: #b0413e;
+  background-color: #ffffc7;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px) scale(1.03);
+  cursor: pointer;
+}
+
+/* small style for winning boxes (extra highlight) */
+.box.winning {
+  box-shadow: 0 0 1.2rem rgba(34,139,34,0.8);
+  transform: scale(1.03);
+}
+
+/* responsive tweak */
+@media (max-width: 600px) {
+  .scoreboard p { font-size: 3.6vmin; }
+  #turn { font-size: 4vmin; }
+  .box { height: 22vmin; width: 22vmin; font-size: 9vmin; }
+}
+

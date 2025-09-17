@@ -63,9 +63,68 @@ img{
 
 #msg{
     background-color: #081b31;
-    color: #fff;
-    font-size: 2rem;
-    display: inline;
-    padding: 1rem;
-    border-radius: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
 }
+
+/* reset button style */
+#reset-scores-btn {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1rem;
+  background: #191913;
+  color: #fff;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+}
+#reset-scores-btn:hover { transform: translateY(-2px); }
+
+/* --- keep your existing CSS above --- */
+
+/* smoother image transitions */
+.choice img {
+  transition: transform 200ms ease, filter 200ms ease;
+  display: block;
+}
+
+/* when user clicks or computer revealed */
+.choice.selected {
+  transform: scale(1.08);
+  transition: transform 180ms ease;
+}
+
+/* glow animations (size change) */
+@keyframes glow-green {
+  0% { box-shadow: 0 0 8px rgba(0,200,0,0.7); }
+  100% { box-shadow: 0 0 28px rgba(0,200,0,0.95); }
+}
+@keyframes glow-red {
+  0% { box-shadow: 0 0 8px rgba(200,0,0,0.7); }
+  100% { box-shadow: 0 0 28px rgba(200,0,0,0.95); }
+}
+@keyframes glow-blue {
+  0% { box-shadow: 0 0 8px rgba(0,100,255,0.6); }
+  100% { box-shadow: 0 0 28px rgba(0,100,255,0.95); }
+}
+
+/* result classes */
+.choice.win {
+  animation: glow-green 0.7s ease-in-out infinite alternate;
+  transform: scale(1.12);
+}
+.choice.lose {
+  animation: glow-red 0.7s ease-in-out infinite alternate;
+  transform: scale(1.06);
+  filter: saturate(0.9);
+}
+.choice.draw {
+  animation: glow-blue 0.7s ease-in-out infinite alternate;
+  transform: scale(1.08);
+}
+
+
+
+

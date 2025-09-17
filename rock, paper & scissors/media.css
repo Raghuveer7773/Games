@@ -1,0 +1,77 @@
+@media (max-width: 1024px) {
+  .choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .msg-container {
+    margin-top: 3rem;
+  }
+
+  .score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  button#reset-scores-btn {
+    margin-top: 2.2rem;
+    padding: 0.6rem 1rem;
+    background: #191913;
+    color: #fff;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 425px) {
+  img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  div#rock {
+    width: 40%;
+  }
+
+  .score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  button#reset-scores-btn {
+    margin-top: 4.2rem;
+    padding: 0.6rem 1rem;
+    background: #191913;
+    color: #fff;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .msg-container {
+    margin-top: 4rem;
+  }
+}
